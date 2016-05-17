@@ -43,7 +43,7 @@ object WordCount {
 
 
     val counts = text.flatMap { _.toLowerCase.split("\\W+") }
-      .map { (_, 1) }
+      .map { (_, 1) } //(currentWorld, 1) 
       .groupBy(0)
       .sum(1)
 
